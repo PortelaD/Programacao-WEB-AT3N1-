@@ -1,3 +1,188 @@
+/* Importando a fonte do Google - Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Definindo o front do form-wrapper e seus filhos */
+.form-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 430px;
+    padding: 60px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.7);
+    transform: translate(-50%, -50%);
+}
+
+.form-wrapper h2 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.form-wrapper form {
+    margin: 25px 0 65px;
+}
+
+form .form-control {
+    position: relative;
+    height: 50px;
+    margin-bottom: 16px;
+}
+
+.form-control input {
+    height: 100%;
+    width: 100%;
+    background: #333;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 0 20px;
+}
+
+/* Ajusta a cor e o espaçamento do campo de texto quando ele está selecionado */
+.form-control input:is(:focus, :valid) {
+    background: #444;
+    padding: 16px 20px 0;
+}
+
+.form-control label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    color: #8c8c8c;
+    pointer-events: none;
+    font-size: 1rem;
+    transform: translateY(-50%);
+    transition: all 0.1s ease;
+}
+
+/* Ajusta o tamanho e a translação do titulo do campo de texto quando ele está selecionado */
+.form-control input:is(:focus, :valid) ~ label {
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+}
+
+form button {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+    background-color: #e50914;
+    margin: 25px 0 10px;
+    transition: 0.1s ease;
+}
+
+form button:hover {
+    background-color: #c40812;
+}
+
+/* Ajusta o layout da parte abaixo do botão de logar-se */
+form .form-help {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .remember-me {
+    display: flex;
+}
+
+form .remember-me input {
+    margin-right: 5px;
+    accent-color: #b3b3b3;
+}
+
+/* Ajusta o tamanho da parte abaixo do botão de logar-se */
+form .form-help :where(label, a){
+    font-size: 0.9rem;
+}
+
+/* Coloca em cinza a parte abaixo do botão de logar-se */
+.form-wrapper :where(label, p, small, a) {
+    color: #b3b3b3;
+}
+
+.form-wrapper p a {
+    color: #fff;
+}
+
+.form-wrapper small {
+    display: block;
+    margin-top: 15px;
+}
+
+.form-wrapper small a {
+    color: #0071eb;
+}
+
+/* Define os textos clicáveis como não tendo decoração até o momento do hover */
+.form-wrapper a {
+    text-decoration: none;
+}
+
+.form-wrapper a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 740px) {
+    body::before {
+        display: none;
+    }
+    nav, .form-wrapper {
+        padding: 20px;
+    }
+    nav, a img {
+        width: 140px;
+    }
+    .form-wrapper {
+        top: 43%;
+        width: 100%;
+    }
+    .form-wrapper form {
+        margin: 25px 0 40px;
+    }
+}
+
+/* Definindo o front do body com id "Body_login" */
+#Body_login {
+    background: #000;
+}
+
+#Body_login::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: url("Imagens/hero-img.jpg");
+    background-position: center;
+}
+
+/* Fazendo a imagem da logo não ficar com opacidade reduzida */
+nav {
+    position: fixed;
+    z-index: 1;
+    padding: 25px 60px;
+}
+
+nav a img{
+    width: 160px;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
