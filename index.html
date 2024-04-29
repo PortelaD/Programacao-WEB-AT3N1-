@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Streaming Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Netflix V0.1</h1>
+        <div>
+            <input type="text" id="searchInput" placeholder="Busca...">
+            <button onclick="searchMovies()">Buscar</button>
+            <select id="categoryFilter" onchange="filterMovies()">
+                <option value="">Todas as categorias</option>
+                <option value="Ação">Ação</option>
+                <option value="Drama">Drama</option>
+                <option value="Comédia">Comédia</option>
+            </select>
+        </div>
+        <br>
+        <div id="moviesList"></div>
+        <h2>Minha lista de filmes</h2>
+        <div id="myList"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
