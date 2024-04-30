@@ -9,21 +9,25 @@
     <link rel="stylesheet" href="stylesHomePage.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
-<nav>
-    <a href= "#"><img src= "logo.svg" alt= "logo"></a>
-    <a href="homePage.html">Início</a>
-    <a href="homePage.html">Séries</a>
-    <a href="homePage.html">Filmes</a>
-    <a href="homePage.html">Bombando</a>
-    <a href="myList.html">Minha Lista</a>
-</nav>
+<div class="parentDiv">
+    <nav>
+        <a href= "#"><img src= "logo.svg" alt= "logo"></a>
+        <a href="homePage.html">Início</a>
+        <a href="homePage.html">Séries</a>
+        <a href="homePage.html">Filmes</a>
+        <a href="homePage.html">Bombando</a>
+        <a href="myList.html">Minha Lista</a>
+            <input type="text" id="searchInput" placeholder="Busca...">
+            <button onclick="searchMovies()">  
+                <box-icon name='search' color="white"></box-icon>
+            </button>
+    </nav>
+</div>
 <body>
     <div id="ajusteNavBar"></div>
     <div class="container">
         <!-- <h1>Fakeflix V0.1</h1> -->
         <div>
-            <input type="text" id="searchInput" placeholder="Busca...">
-            <button onclick="searchMovies()">Buscar</button>
             <select id="categoryFilter" onchange="filterMovies()">
                 <option value="">Todas as categorias</option>
                 <option value="Ação">Ação</option>
