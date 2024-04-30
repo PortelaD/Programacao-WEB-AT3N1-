@@ -168,7 +168,7 @@ form .form-help :where(label, a){
     width: 100%;
     height: 100%;
     opacity: 0.5;
-    background: url("Imagens/hero-img.jpg");
+    background: url("hero-img.jpg");
     background-position: center;
 }
 

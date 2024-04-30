@@ -8,36 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body id="Body_login">
-    <nav>
-        <a href= "#"><img src= "imagens/logo.svg" alt= "logo"></a>
-    </nav>
-
-    <div class="form-wrapper">
-        <h2>Log In</h2>
-        <form action="homePage.html">
-            <div class="form-control">
-                <input type="text" required>
-                <label>Email ou numero de celular</label>
-            </div>
-            <div class="form-control">
-                <input type="password" required>
-                <label>Senha</label>
-            </div>
-            <button type="submit">Logar</button>
-            <div class="form-help">
-                <div class="remember-me">
-                    <input type="checkbox" id="remember-me">
-                    <label for="remember-me">Lembre-se de mim</label>
-                </div>
-                <a href="#">Precisa de ajuda?</a>
-            </div>
-        </form>
-        <p>Não é usuário do Netflix ainda? <a href="#">Cadastre-se agora</a></p>
-        <small>
-            Essa pagina é protegida pelo Google reCAPTCHA para garantir que você não é um robô.
-            <a href="#">Saiba mais.</a>
-        </small>
+<body>
+    <div class="container">
+        <h1>Fakeflix V0.1</h1>
+        <div>
+            <input type="text" id="searchInput" placeholder="Busca...">
+            <button onclick="searchMovies()">Buscar</button>
+            <select id="categoryFilter" onchange="filterMovies()">
+                <option value="">Todas as categorias</option>
+                <option value="Ação">Ação</option>
+                <option value="Drama">Drama</option>
+                <option value="Comédia">Comédia</option>
+            </select>
+        </div>
+        <br>
+        <div id="moviesList"></div>
+        <h2>Minha lista de filmes</h2>
+        <div id="myList"></div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
